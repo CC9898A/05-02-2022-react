@@ -1,12 +1,20 @@
+import React from 'react';
 import horror from '../horror.json'
 
-function LatestRelease() {
-    return(
-<div>
-    {horror.map(book => <div><img src={book.img}/> <p>{book.price}</p></div>)}
-    
+import SingleBook from './SingleBook';
+
+
+
+class LatestRelease extends React.Component{
+render(){
+return <div>
+{horror.map(book => <SingleBook book = {book}  ></SingleBook>)}
+
 </div>
-    )
-      
+
+
+
+}
+
 }
 export default LatestRelease;
